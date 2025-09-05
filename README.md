@@ -89,15 +89,55 @@ A full-stack **Retail Billing System** built with **Spring Boot (Backend)** and 
 
 ## 🚀 Getting Started
 
-### Backend (Spring Boot)
+### Prerequisites
+- Java 17+
+- Docker
+- Node.js 16+
+- npm
 
-```bash
-cd backend
-./mvnw spring-boot:run
+### Backend Setup (Spring Boot with Docker)
 
-cd frontend
-npm install
-npm start
+1. **Navigate to backend directory:**
+   ```bash
+   cd billingsoftware
+   ```
+
+2. **Build Docker image:**
+   ```bash
+   docker build -t billing-backend .
+   ```
+
+3. **Run backend container:**
+   ```bash
+   docker run -d --name billing-backend -p 8080:8080 billing-backend
+   ```
+
+The backend will be available at `http://localhost:8080`
+
+### Frontend Setup (React)
+
+1. **Navigate to frontend directory:**
+   ```bash
+   cd client
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server:**
+   ```bash
+   npm run dev
+   ```
+
+The frontend will be available at `http://localhost:5173` or `http://localhost:5174`
+
+### Default Login Credentials
+- **Email:** `admin@billing.com`
+- **Password:** `admin123`
+
+---
 
 
 
